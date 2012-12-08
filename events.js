@@ -7,7 +7,7 @@ define("events",["$class"], function( $ ){
         },
         addEventListener: function(type, callback, scope, priority) {
             if(isFinite( scope )){
-                priority = scope
+                priority = scope;
                 scope = null;
             }
             priority = priority || 0;
@@ -53,11 +53,11 @@ define("events",["$class"], function( $ ){
                     args[ 0 ] = {
                         type:  type,
                         target: target
-                    }
+                    };
                     listener.callback.apply(target, args);
                 }
             }
         }
     })
-}) 
+});
 
