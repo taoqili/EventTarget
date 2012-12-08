@@ -6,8 +6,9 @@ define("events",["$class"], function( $ ){
             this._eventTarget = target || this;
         },
         addEventListener: function(type, callback, scope, priority) {
+            var a = 1;
             if(isFinite( scope )){
-                priority = scope
+                priority = scope;
                 scope = null;
             }
             priority = priority || 0;
@@ -52,11 +53,11 @@ define("events",["$class"], function( $ ){
                     args[ 0 ] = {
                         type:  type,
                         target: target
-                    }
+                    };
                     listener.callback.apply(target, args);
                 }
             }
         }
     })
-}) 
+});
 
