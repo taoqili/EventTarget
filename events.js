@@ -31,7 +31,8 @@ define("events",["$class"], function( $ ){
             });
         },
         removeEventListener: function(type, callback) {
-            var list = this._listeners[type], i;
+            var list = this._listeners[type],
+                i;
             if (list) {
                 i = list.length;
                 while (--i > -1) {
