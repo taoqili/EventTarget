@@ -6,7 +6,6 @@ define("events",["$class"], function( $ ){
             this._eventTarget = target || this;
         },
         addEventListener: function(type, callback, scope, priority) {
-            var a = 1;
             if(isFinite( scope )){
                 priority = scope;
                 scope = null;
